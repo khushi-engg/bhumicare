@@ -1,0 +1,391 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen green background excluding navbar */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: green;
+    color: antiquewhite;
+    text-align: center; /* Green background */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center; /* Aligns items in a single line */
+    justify-content: flex-end; /* Spaces items evenly */
+    background-color: black; /* Adjust as needed */
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+    color: white; /* Adjust text color */
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .icons i {
+    margin-left: 10px; /* Adjust spacing */
+    color: white;
+}
+.nav-item{
+    padding-top: 5px;
+}
+
+/* Style nav links */
+
+/* Hover effect */
+.nav-links li a:hover {
+    color: #4CAF50; /* Green highlight */
+}
+
+/* Icon styling */
+
+
+/* Style username */
+#usernameDisplay {
+    font-weight: bold;
+}
+
+/* Ensures content below navbar takes full green background */
+.main-content {
+    flex: 1;  /* Takes up remaining space */
+    background-color: green; /* Green background */
+    width: 100%;
+}
+/* Dashboard layout */
+.dashboard-container {
+    display: flex;
+    justify-content:flex-start;
+    gap: 20px; /* Equal spacing */
+    margin-top: 20px;
+    
+}
+
+/* User Info Box */
+.user-info {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+    font-size: 18px;
+    margin-left: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.2);  /* Light transparent background */
+    color: white;  /* Ensures text is readable */
+    width: fit-content; 
+}
+.user-info h2 {
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.soil-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card {
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    height:250px;
+}
+.card p{
+    color:#333;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-icon {
+    font-size: 30px;
+    color: #2E8B57; /* Sea Green */
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 1.3em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.moisture-graph {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.temperature-graph {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.graph-container {
+    width: 50%;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #9d3d3d;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+    
+}
+h3{
+    color: black;
+}
+.chart-container {
+    width: 40%;
+    background: rgb(144, 154, 187);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.recommendation-section {
+    width: 60%;
+    margin: 50px auto; /* Adds separation from above */
+    background: #e3f2fd; /* Light blue background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.recommendation-section h2{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.recommendation-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    position: relative;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.timestamp {
+    position: absolute;
+    right: 15px;
+    font-size: 12px;
+    color: gray;
+}
+.action-reports-section {
+    width: 70%;
+    margin: 50px auto; /* Adds spacing from the above section */
+    background: #e3f2fd; /* Light Blue Background */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.action-reports-section h2{
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.action-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.action-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    margin: auto;
+   
+}
+
+.action-card i {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.action-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Dropdown for "Compare Farm Performance" */
+.dropdown {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.profit-loss {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+   
+}
+
+.dashboard2-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Take full width */
+    max-width: 100%;
+    margin: auto;
+    display: none; /* Initially hidden */
+    height: 300px; /* Keep the height fixed */
+}
+
+canvas#farmChart {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+}
+
+.footer-contact,
+.footer-social,
+.footer-subscribe,
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    min-width: 220px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    padding: 10px;
+    right: 0;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+
+.dropdown-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.dropdown-content a {
+    display: block;
+    margin: 10px auto;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: grey;
+}
+
+/* Section Styles */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    display: none;
+}
